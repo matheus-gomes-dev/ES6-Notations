@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - This with Arrow Function</title>
+</head>
+<body>
+
+    <button id="btn">Click Me!</button>
+    <button id="btn-arrowFunction">Click Me!</button>
+</body>
+
+<script>
+
+	//when working with arrow functions, 'this' element references parent scope
+	
+    const btn1 = document.getElementById('btn');
+    btn1.addEventListener('click', function() {
+        console.log(this); //here I get the button itself
+    });
+
+    const btn2 = document.getElementById('btn-arrowFunction');
+    btn2.addEventListener('click', () => {
+        console.log(this); //here I get the window
+    });
+
+</script>
+</html>

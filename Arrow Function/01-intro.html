@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Intro Arrow Function</title>
+</head>
+<body>
+</body>
+
+<script>
+    const ireland = ['Dublin', 'Galway', 'Cork'];
+
+    const love = ireland.map(function(name) {
+        return `I love ${name}!`;
+    });
+
+    //remove the word 'function' and add '=>' after the parameters to get the arrow function:
+
+    const loveArrow = ireland.map((name) => {
+        return `I love ${name}!`;
+    });
+
+    //if I have a single parameter, I can remove the parentheses:
+
+    const loveArrowSingle = ireland.map(name => {
+        return `I love ${name}!`;
+    });
+
+    //if my function is single line, I can remove the '{}' and the 'return':
+
+    const loveArrowOneLine = ireland.map(name => `I love ${name}!`);
+
+
+    //now I can easily chain functions with AMAZING syntax! \o/
+
+    const loveChain = ireland
+                        .filter(name => name === 'Dublin')
+                        .map(name => `I love ${name}!`);
+
+    console.log(loveChain);
+</script>
+</html>
