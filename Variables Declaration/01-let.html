@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - let</title>
+</head>
+<body>
+</body>
+
+<script>
+
+	console.log("----- Example 1 -----");
+	//animal variable in the block has no relation with animal variable declared with var
+    var animal = 'cat';
+    console.log(animal);
+    {
+        let animal = 'dog';
+        console.log(animal);
+    }
+    console.log(animal);
+    console.log("----- -----");
+
+
+    console.log("----- Example 2 -----");
+	//if I change variable declared with let inside the block
+	//parent scope is also changed
+    let subject = 'math';
+    console.log(subject);
+    {
+        subject = 'biology';
+        console.log(subject);
+    }
+    console.log(subject);
+    console.log("----- -----")
+
+
+    console.log("----- Example 3 -----");
+	//if I try to declare tha vehicle variable again with let, 
+	//I got an error: it's already declared in the same scope 
+	//(it doesn't happen if I declare again with var)
+	var vehicle	= 'car';
+    let vehicle = 'car'; //error
+    {
+    	let vehicle	= 'car'//no errors
+    }
+    console.log("----- -----");
+
+</script>
+</html>
