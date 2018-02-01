@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Destructuring Objects</title>
+</head>
+<body>
+</body>
+
+<script>
+    var data = {
+        name: 'Willian',
+        surname: 'Justen',
+        age: 25,
+        blog: 'https://willianjusten.com.br',
+        social: {
+            twitter: '@Willian_Justen',
+            facebook: '/willianjusten'
+        }
+    };
+    
+    /*
+    getting data from object without destructuring:
+
+    const name = data.name;
+    const surname = data.surname;
+    const twitter = data.social.twitter;
+    console.log(name);
+    console.log(surname);
+    console.log(twitter);
+    */
+    
+    // getting data from object using destructuring
+    
+    const { name, surname } = data;
+    console.log(name);
+    console.log(surname);
+
+    const { facebook, twitter } = data.social;
+
+    console.log(facebook);
+    console.log(twitter);
+
+
+    const { facebook: fb } = data.social;
+    
+    console.log(fb);
+
+    const { city = 'Dublin' } = data; //if 'city' is not in the Object, define default value
+    console.log(city);
+
+</script>
+</html>
