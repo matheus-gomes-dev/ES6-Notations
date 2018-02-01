@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - Default Parameters</title>
+</head>
+<body>
+</body>
+
+<script>
+
+	//I can set default values to variables in functions declaration,
+	//so when a I call a function without sending any parameter, I don't get undefined
+    function hello (name = 'Matheus', surname = 'Lima') {
+    	
+    	//name = name || 'Matheus'; //old implementation to handle undefined parameters
+    	//surname = surname || 'Lima'; //old implementation to handle undefined parameters
+        console.log(`Hello ${name} ${surname}! How are you?`);
+    }
+
+    hello();
+
+    hello('Jonas', 'Mendes');
+
+    hello('Jonas');
+</script>
+</html>
